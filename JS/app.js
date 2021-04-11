@@ -16,6 +16,20 @@ const Seattle = {
       this.cookiePerHour.push(cookieNumber);
     }
   },
+  creatingList:function(){
+    let container= document.getElementById('FisrtDiv');
+    let h2=document.createElement('h2');
+    container.appendChild(h2);
+    h2.textContent='Seattle';
+    let unordered =document.createElement('ul');
+    container.appendChild(unordered);
+    let li=null;
+    for(let i=0;i<this.operationHours.length;i++){
+      li=document.createElement('li');
+      unordered.appendChild(li);
+      li.textContent=`${this.operationHours[i]}: ${Math.ceil(this.cookiePerHour[i])} cookies`;
+    }
+  }
   // AvgCookieSale:function(){
   //   this.cookiePerHour.push()
   // }
@@ -24,6 +38,7 @@ const Seattle = {
 
 Seattle.randomCustomer();
 console.log('avg the cook'+Seattle.cookiePerHour);
+Seattle.creatingList();
 
 
 // This funtcion is from The MDN
