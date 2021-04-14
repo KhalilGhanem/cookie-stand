@@ -11,3 +11,9 @@ table, td, th {
   .fh1 {
       text-align: center;
   }
+  form{
+    color: white;;
+  }
+  fieldset{
+    width: fit-content;
+  }
