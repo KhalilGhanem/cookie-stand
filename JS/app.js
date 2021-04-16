@@ -52,7 +52,7 @@ function addfooter(){
     tableFooter.appendChild(foEl1);
     let ftotal=0;
     for(let j=0;j<arrayObj.length;j++){
-      ftotal=+arrayObj[j].cookiePerHour[i];
+      ftotal+=arrayObj[j].cookiePerHour[i];
     }
     foEl1.textContent=ftotal;
   }
